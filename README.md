@@ -14,8 +14,8 @@ Features:
 
 # Thanks to
 
-Hiroaki Okoshi
-Zurab aka kuber from electronix.ru
+* Hiroaki Okoshi
+* Zurab aka kuber from electronix.ru
 
 # Download
 
@@ -61,10 +61,7 @@ mode it is necessary to power up the MCU with the RESET pin tied to ground.
 
 Step-by-step procedure:
 1. power down the MCU;
-2. start rl78flash with -d argument
-```
-$ rl78flash -diva /dev/ttyUSB0 firmware.mot
-```
+2. start rl78flash with -d option: `rl78flash -diva /dev/ttyUSB0 firmware.mot`
 3. wait for the message "Turn MCU's power on and press any key...";
 4. power up the MCU;
 5. press any key;
