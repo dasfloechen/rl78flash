@@ -15,7 +15,8 @@ Features:
 # Thanks to
 
 * Hiroaki Okoshi
-* Zurab aka kuber from electronix.ru
+* Zurab aka kuber from http://electronix.ru/forum
+* MON-80 at http://mon80.blog.fc2.com
 
 # Download
 
@@ -60,19 +61,32 @@ enter bootloader mode without additional user actions. To enter bootloader
 mode it is necessary to power up the MCU with the RESET pin tied to ground.
 
 Step-by-step procedure:
+
 1. power down the MCU;
-2. start rl78flash with -d option: `rl78flash -diva /dev/ttyUSB0 firmware.mot`
+2. start rl78flash with -d option;
 3. wait for the message "Turn MCU's power on and press any key...";
 4. power up the MCU;
 5. press any key;
 6. that's all.
+
+Example: Erase RPBRL78G14 with RESET acting as a GPIO
+```
+$ ./rl78flash -dive -m3 /dev/ttyUSB0
+Turn MCU's power on and press any key...
+Device: R5F104LE
+Code size: 64 kB
+Data size: 4 kB
+Erase
+
+$
+```
 
 This procedure is valid for rl78g10flash too.
 
 # License
 
 The MIT License (MIT)
-Copyright (c) 2012-2014 Maksim Salau
+Copyright (c) 2012-2016 Maksim Salau
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
